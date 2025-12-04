@@ -1,5 +1,5 @@
-#Welcome
-  #Project Setup
+# Welcome
+## Project Setup
 - clone the project
 - Execute 'npm install' on the same path as of your root directory of downloaded project 
 - Create .env file in root directory and add following env variables
