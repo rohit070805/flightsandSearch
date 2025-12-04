@@ -4,12 +4,13 @@
   "description": "microservice for handling flight CRUD",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "npx nodemon src/index"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^2.2.1",
+    "dotenv": "^17.2.3",
     "express": "^5.2.1",
     "nodemon": "^3.1.11"
   }
