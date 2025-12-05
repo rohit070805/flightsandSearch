@@ -10,7 +10,7 @@ class CityRepository{
                 throw {error};
         }
     }
-    async deleteCity({cityId}){
+    async deleteCity(cityId){
         try {
             await City.destroy({
                 where:{
