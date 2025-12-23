@@ -13,8 +13,8 @@ const setupAndStartServer = async()=>{
     app.listen(PORT,()=>{
         console.log(`Server started at ${PORT}`);
         const repo = new CityRepository();
-       // repo.createCity({name:"Jaipur"});
-        repo.deleteCity(4);
+       repo.createCity({name:"Jaipur"});
+        //repo.deleteCity(4);
         
     })
 }

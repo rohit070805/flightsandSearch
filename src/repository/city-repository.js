@@ -2,7 +2,7 @@ const { where } = require('sequelize');
 const {City} = require('../models/index');
 
 class CityRepository{
-    async createCity({name}){
+     async createCity({name}){  // name is object thats under City Model
         try{
             const city = await City.create({name});
             return city;
@@ -19,6 +19,26 @@ class CityRepository{
             });
         } catch (error) {
             throw {error};
+        }
+    }
+    async updateCity(cityId,data){
+        try {
+            const city = await City.update(data,{
+                where:{
+                    id:City
+                }
+            });
+            return city;
+        } catch (error) {
+            throw {error};
+        }
+    }
+    async getCity(cityId){
+        try{
+            const city = City.find({id:cityId});
+            return city;
+        }catch(error){
+                throw {error};
         }
     }
 
