@@ -35,7 +35,7 @@ class CityRepository{
     }
     async getCity(cityId){
         try{
-            const city = City.find({id:cityId});
+            const city = City.find({where:{id:cityId}});
             return city;
         }catch(error){
                 throw {error};
