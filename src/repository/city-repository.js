@@ -26,11 +26,14 @@ class CityRepository{
     }
     async updateCity(cityId,data){
         try {
+            // this will only return the number of rows changed
             // const city = await City.update(data,{
             //     where:{
             //         id:cityId
             //     }
             // });
+
+            // this will return the actual city as well
             const city = await City.findByPk(cityId);
             city.name = data.name;
             city.save();
