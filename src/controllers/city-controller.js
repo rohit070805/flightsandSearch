@@ -1,7 +1,7 @@
 const {CityService} = require('../services/index');
 const cityService= new CityService();
 
-
+// POST -> /city
 const create = async(req,res)=>{
     try {
         const city = await cityService.createCity(req.body);
@@ -22,7 +22,7 @@ const create = async(req,res)=>{
     }
 }
 
-
+// DELETE -> /city/:id
 const destroy= async (req,res)=>{
      try {
         const response = await cityService.deleteCity(req.params.id);
@@ -42,7 +42,7 @@ const destroy= async (req,res)=>{
         });
     }
 }
-
+// GET -> /city/:id
 const get = async(req,res)=>{
     try {
         const response = await cityService.getCity(req.params.id);
@@ -62,6 +62,7 @@ const get = async(req,res)=>{
         });
     }
 }
+// Patch -> /city/:id
 const update = async(req,res)=>{
       try {
         const response = await cityService.updateCity(req.params.id,req.body);
