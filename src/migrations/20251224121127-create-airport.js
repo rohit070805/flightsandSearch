@@ -22,9 +22,9 @@ module.exports = {
         references:{
           model:'Cities',
           key:'id',
-          id:'cityId'
+          as:'cityId' // this id acts as cityId here.
         },
-        allowNull:false
+        allowNull:false 
       },
       createdAt: {
         allowNull: false,
