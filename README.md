@@ -36,3 +36,13 @@
 ```
 npx sequelize model:generate --name Airport --attributes name:String,address:String,cityId:integer
 ```
+## Seeders Pushing Code
+### Create Seed file
+```
+npx sequelize-cli seed:create --name=your-seed-name
+```
+### actual seeding to database
+```
+npx sequelize-cli db:seed:all
+```
+
