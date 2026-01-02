@@ -13,6 +13,10 @@ class FlightRepository{
         if(data.departureAirportId){
             filter.departureAirportId = data.departureAirportId;
         }
+         if(data.minPrice && data.maxPrice){
+            Object.assign(filter,{price:{[Op.between]:[data.minPrice,data.maxPrice]}});
+            return filter;
+        }
         if(data.minPrice){
             Object.assign(filter,{price:{[Op.gte]:data.minPrice}});
         }
@@ -20,9 +24,7 @@ class FlightRepository{
             Object.assign(filter,{price:{[Op.lte]:data.maxPrice}});
         }
         // agr dono hone to price filter overwrite ho jayega by max so change krna pdega,in case both are ther
-        if(data.minPrice && data.maxPrice){
-            Object.assign(filter,{price:{[Op.between]:[data.minPrice,data.maxPrice]}});
-        }
+       
         return filter;
     }
     async createFlight(data){
