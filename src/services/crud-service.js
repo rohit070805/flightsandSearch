@@ -12,7 +12,7 @@ class CrudService{
             throw {error};
         }
     }
-    async deleteSerive(modelId){
+    async deleteService(modelId){
         try {
             const response= await this.repository.deleteModel(modelId);
             return response;

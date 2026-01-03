@@ -26,7 +26,7 @@ const create = async(req,res)=>{
 
 const destroy= async (req,res)=>{
      try {
-        const response = await airplaneService.deleteSerive(req.params.id);
+        const response = await airplaneService.deleteService(req.params.id);
         return res.status(200).json({
             data:response,
             success:true,
