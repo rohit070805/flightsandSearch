@@ -1,3 +1,4 @@
+
 const {AirportService} = require('../services/index');
 const airportService= new AirportService();
 
@@ -69,7 +70,7 @@ const getAll = async(req,res)=>{
         // console.log(req.query.name);
         // console.log(req.params);
         // console.log("Hello");
-        const airports = await airportService.getAllService(req.query);
+        const airports = await airportService.getAllService();
         return res.status(200).json({
             data:airports,
             success:true,
