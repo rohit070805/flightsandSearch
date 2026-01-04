@@ -45,4 +45,6 @@ npx sequelize seed:create --name "your-seed-name"
 ```
 npx sequelize db:seed:all
 ```
+% Auth Service
+
 
